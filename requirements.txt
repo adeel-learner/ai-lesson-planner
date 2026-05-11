@@ -1,0 +1,7 @@
+uvicorn
+langchain
+langchain-openai
+python-dotenv
+pydantic
+langchain-groq
+dotenv
