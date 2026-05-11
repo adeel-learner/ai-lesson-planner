@@ -24,7 +24,7 @@ Run sample test:
 python -m app.test.simple_test
 ```
 or 
-Maybe once you are confident then you can build a FASTAPI server later!
+maybe once you are confident then you can build a FASTAPI server later!
 
 Run the FastAPI server:
 ```bash
