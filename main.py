@@ -4,13 +4,13 @@ from app.configuration.model_config import (
     LessonResponse
 )
 
-from app.chains.lesson_generator import LessonGenerator
+from app.ai_curriculum_planner import AICurriculumPlanner
 
 app = FastAPI(
     title="AI Lesson Planner"
 )
 
-generator = LessonGenerator()
+generator = AICurriculumPlanner(user_input={})
 
 
 @app.get("/")
@@ -24,8 +24,7 @@ def generate_lesson(request: LessonRequest):
     results = generator.generate_full_lesson(
         topic=request.topic,
         grade_level=request.grade_level,
-        curriculum=request.curriculum,
-        dimensions=request.dimensions
+        curriculum=request.curriculum
     )
 
     return LessonResponse(results=results)
